@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="flex justify-between items-center p-6 bg-white shadow-md">
+    <h1 class="text-2xl font-bold text-red-600">Doctor Dashboard</h1>
+    <a href="/logout" 
+       class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
+        Logout
+    </a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="p-10">
+
+    <h2 class="text-3xl font-bold mb-8">Welcome Doctor 👨‍⚕️</h2>
+
+    <!-- 🔥 ADD YOUR GRID HERE -->
+    <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition transform duration-300">
+            <h3 class="text-xl font-bold mb-2">📊 Dashboard</h3>
+            <p>View live heart data</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition transform duration-300">
+            <h3 class="text-xl font-bold mb-2">📑 My Reports</h3>
+            <p>Access patient reports</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition transform duration-300">
+            <h3 class="text-xl font-bold mb-2">📅 Appointments</h3>
+            <p>Manage appointments</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition transform duration-300">
+            <h3 class="text-xl font-bold mb-2">📲 SMS Alerts</h3>
+            <p>Send emergency alerts</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

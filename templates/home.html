@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CardioAI - Intelligent Cardiac Monitoring</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .float-card {
+            transition: all 0.4s ease;
+        }
+
+        .float-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- NAVBAR -->
+<nav class="flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-50">
+    <h1 class="text-2xl font-bold text-red-600 hover:scale-110 transition duration-300">
+        ❤️ CardioAI
+    </h1>
+    <div class="space-x-6">
+        <a href="#features" class="hover:text-red-500 transition">Features</a>
+        <a href="#testimonials" class="hover:text-red-500 transition">Testimonials</a>
+        <a href="/select-login"
+           class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 hover:shadow-lg transition duration-300">
+            Login
+        </a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="text-center py-24 bg-gradient-to-br from-red-50 to-white fade-in">
+    <h2 class="text-5xl font-bold text-gray-800 mb-6">
+        AI-Powered Cardiac Monitoring
+    </h2>
+    <p class="text-gray-600 text-lg mb-8">
+        Real-time health insights. Instant alerts. Smarter care.
+    </p>
+    <a href="/select-login"
+       class="bg-red-500 text-white px-8 py-4 rounded-xl text-lg hover:bg-red-600 hover:shadow-xl transition duration-300">
+        Get Started
+    </a>
+</section>
+
+<!-- FEATURES SECTION -->
+<section id="features" class="py-20 px-10 bg-white">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-16 fade-in">
+        Powerful Features
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-10">
+
+        <div class="float-card bg-gray-50 p-8 rounded-2xl text-center cursor-pointer">
+            <div class="text-5xl mb-4">📊</div>
+            <h3 class="text-xl font-semibold mb-2">Live Dashboard</h3>
+            <p class="text-gray-600">
+                Monitor real-time heart data with AI-driven insights and dynamic updates.
+            </p>
+        </div>
+
+        <div class="float-card bg-gray-50 p-8 rounded-2xl text-center cursor-pointer">
+            <div class="text-5xl mb-4">📑</div>
+            <h3 class="text-xl font-semibold mb-2">Smart Reports</h3>
+            <p class="text-gray-600">
+                Automatically generated health reports with trend analysis and predictions.
+            </p>
+        </div>
+
+        <div class="float-card bg-gray-50 p-8 rounded-2xl text-center cursor-pointer">
+            <div class="text-5xl mb-4">📅</div>
+            <h3 class="text-xl font-semibold mb-2">Appointments</h3>
+            <p class="text-gray-600">
+                Schedule and manage doctor visits seamlessly through the platform.
+            </p>
+        </div>
+
+        <div class="float-card bg-gray-50 p-8 rounded-2xl text-center cursor-pointer">
+            <div class="text-5xl mb-4">📱</div>
+            <h3 class="text-xl font-semibold mb-2">SMS Alerts</h3>
+            <p class="text-gray-600">
+                Instant notifications when abnormal heart activity is detected.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-20 bg-gradient-to-br from-gray-100 to-red-50">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-16 fade-in">
+        What Users Say
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10 px-10">
+
+        <div class="float-card bg-white p-8 rounded-2xl shadow-md">
+            <p class="text-gray-600 mb-4">
+                "CardioAI helped detect early irregularities in my heart rate. Truly life-saving!"
+            </p>
+            <h4 class="font-semibold text-red-600">— Patient</h4>
+        </div>
+
+        <div class="float-card bg-white p-8 rounded-2xl shadow-md">
+            <p class="text-gray-600 mb-4">
+                "The real-time dashboard makes monitoring patients incredibly efficient."
+            </p>
+            <h4 class="font-semibold text-red-600">— Cardiologist</h4>
+        </div>
+
+        <div class="float-card bg-white p-8 rounded-2xl shadow-md">
+            <p class="text-gray-600 mb-4">
+                "Smart alerts give peace of mind to families and doctors alike."
+            </p>
+            <h4 class="font-semibold text-red-600">— Caregiver</h4>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-6 bg-white shadow-inner">
+    <p class="text-gray-500">
+        © 2026 CardioAI • Intelligent Healthcare Solutions
+    </p>
+</footer>
+
+</body>
+</html>

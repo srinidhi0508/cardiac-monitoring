@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Dashboard</title>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-6">
+
+<h1 class="text-3xl font-bold mb-6 text-center">Patient Health Dashboard</h1>
+
+<div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Heart Rate Card -->
+    <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition transform duration-300">
+        <h2 class="text-xl font-semibold">Heart Rate</h2>
+        <p id="heart_rate" class="text-3xl text-blue-600 mt-2">-- BPM</p>
+    </div>
+
+    <!-- Diagnosis Card -->
+    <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition transform duration-300">
+        <h2 class="text-xl font-semibold">Diagnosis</h2>
+        <p id="diagnosis" class="text-lg mt-2 text-green-600">Waiting for data...</p>
+    </div>
+
+    <!-- Recommendation Card -->
+    <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition transform duration-300">
+        <h2 class="text-xl font-semibold">Recommendation</h2>
+        <p id="recommendation" class="mt-2 text-gray-700">
+            Stay calm and monitor health.
+        </p>
+    </div>
+
+    <!-- Status Card -->
+    <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition transform duration-300">
+        <h2 class="text-xl font-semibold">System Status</h2>
+        <p id="status" class="mt-2 text-green-600">
+            Connected
+        </p>
+    </div>
+
+</div>
+
+<script>
+var socket = io();
+
+socket.on("heart_update", function(data) {
+
+    document.getElementById("heart_rate").innerText = data.value + " BPM";
+
+    document.getElementById("diagnosis").innerText = data.diagnosis;
+
+    // Smart Recommendation Logic
+    let recommendation = "";
+
+    if (data.value > 120) {
+        recommendation = "⚠ High heart rate detected. Please relax and drink water.";
+    } else if (data.value < 60) {
+        recommendation = "Low heart rate. Sit down and monitor condition.";
+    } else {
+        recommendation = "Heart rate normal. Continue regular activity.";
+    }
+
+    document.getElementById("recommendation").innerText = recommendation;
+
+});
+
+socket.on("connect", function() {
+    document.getElementById("status").innerText = "Connected";
+});
+
+socket.on("disconnect", function() {
+    document.getElementById("status").innerText = "Disconnected";
+});
+
+</script>
+
+</body>
+</html>

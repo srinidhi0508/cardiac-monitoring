@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Login - CardioAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-100 to-red-50 min-h-screen flex items-center justify-center">
+
+<div class="bg-white p-10 rounded-3xl shadow-2xl w-96 transform transition duration-500 hover:scale-105">
+
+    <h1 class="text-3xl font-bold text-gray-800 text-center mb-2">CardioAI</h1>
+    <p class="text-center text-gray-500 mb-6">Doctor Portal</p>
+
+    <form method="POST" action="/doctor_login" class="space-y-5">
+
+        <div>
+            <label class="block text-sm font-medium text-gray-600 mb-1">Doctor ID</label>
+            <input type="text" name="doctor_id"
+                   placeholder="Enter Doctor ID"
+                   class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-700"
+                   required>
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-gray-600 mb-1">Password</label>
+            <input type="password" name="password"
+                   placeholder="Enter Password"
+                   class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-700"
+                   required>
+        </div>
+
+        <button type="submit"
+                class="w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-black transition duration-300">
+            Login
+        </button>
+
+    </form>
+
+    <p class="text-xs text-gray-400 text-center mt-6">
+        Secure Medical Access • Authorized Personnel Only
+    </p>
+
+</div>
+
+</body>
+</html>
