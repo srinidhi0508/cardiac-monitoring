@@ -50,3 +50,5 @@ __pycache__/
 
 # Optional
 backend/__pycache__/
+
+*.zip
