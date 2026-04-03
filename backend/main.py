@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 # ✅ MongoDB connection
-client = MongoClient("mongodb+srv://srinidhivodnala05_db_user:jhaBxNMxGnneWqME@cluster0.dufqv6v.mongodb.net/?appName=Cluster0")  # 🔴 Replace with your Atlas URL
+client = MongoClient("your connect string")  # 🔴 Replace with your Atlas URL
 db = client["cardiac_db"]
 collection = db["patients"]
 
